@@ -4,9 +4,56 @@
           <ion-menu-button></ion-menu-button>
         </ion-buttons>
         <ion-title>Realizados</ion-title>
+        <img slot=end src="/assets/logos/figura-blanco.png">
       </ion-toolbar>
     </ion-header>
 
 <ion-content>
-<ion-button [routerLink]="['/ver-realizado']"> Ver</ion-button> 
+
+  <div class="noReading" *ngIf="!completed">
+    <ion-label>No hay lecturas completadas</ion-label>
+  </div>
+<!-- 
+  <ion-list>  
+    
+  <div *ngIf="completed">    
+   <ion-card  [routerLink]="['/ver-realizado', client.id]" *ngFor="let client of completed; let i = index">
+    <ion-card-subtitle id="id_user">ID {{client.id}}</ion-card-subtitle>
+     <ion-card-header>
+         
+         <div class="cajita">
+           <div class="uno">
+             <ion-card-subtitle>Dirección</ion-card-subtitle>
+             <ion-card-title>{{client.address}}</ion-card-title></div>
+           <div class="dos">
+             <ion-card-subtitle>Nombre</ion-card-subtitle>
+           <ion-card-title>{{client.client.name}}</ion-card-title>
+           </div>
+         </div>
+         <div class="cajita">
+           <div class="uno">
+             <ion-card-subtitle>Lote</ion-card-subtitle>
+             <ion-card-title>{{client.label}}</ion-card-title>
+           </div>
+           <div class="dos">
+             <ion-card-subtitle>Mes de lectura</ion-card-subtitle>
+             <ion-card-title>No registrado</ion-card-title>
+           </div>
+         </div> 
+   </ion-card-header>        
+  </ion-card>
+ </div>
+ 
+</ion-list>
+ -->
+<ion-list  *ngIf="completed">
+  <app-cards-products [client]="client" [routerLink]="['/ver-realizado', client.id]" *ngFor="let client of completed; let i = index"></app-cards-products>
+</ion-list>
+
+<ion-fab *ngIf="completed"  slot="fixed" vertical="bottom" horizontal="center">
+  <ion-fab-button (click)="upload()">
+    <ion-icon size="large" name="cloud-upload-outline"></ion-icon>
+  </ion-fab-button>
+</ion-fab>
+   
 </ion-content>

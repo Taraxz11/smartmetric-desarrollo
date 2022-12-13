@@ -4,17 +4,13 @@ ion-toolbar ion-button{
     --color: #5B5858;
     --box-shadow:none;
     text-transform: none;
-    font-family: 'Segoe UI';
-    --color:#6C7572;
-    font-size: 15px;
-}
-
-ion-toolbar img{
-    height: 45px;
+  }
+  
+  ion-toolbar img{
+    height: 37px;
     width: auto;
     padding-right: 15px;
-}
-
+  }
 ion-content{
     font-family: 'Segoe UI';
     --color:#6C7572;

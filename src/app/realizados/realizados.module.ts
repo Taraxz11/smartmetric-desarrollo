@@ -7,13 +7,14 @@ import { IonicModule } from '@ionic/angular';
 import { RealizadosPageRoutingModule } from './realizados-routing.module';
 
 import { RealizadosPage } from './realizados.page';
-
+import { ComponentsModule } from '../components/components.module';
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    RealizadosPageRoutingModule
+    RealizadosPageRoutingModule,
+    ComponentsModule
   ],
   declarations: [RealizadosPage]
 })

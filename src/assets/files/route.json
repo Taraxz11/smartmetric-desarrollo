@@ -1,0 +1,79 @@
+{
+    "product" : [ 
+        {
+          "employee": "9",
+          "data": [
+            {
+              "id": "1",
+              "label": "LOTE-001 MANZANA 8",
+              "address": "1",
+              "last_measure": 0,
+              "client": {
+                "rowid": "49",
+                "name": "Renan"
+              }
+            },
+            {
+              "id": "2",
+              "label": "LOTE-002 MANZANA 8",
+              "address": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+              "last_measure": 0,
+              "client": {
+                "rowid": "4",
+                "name": "CONSTRUCTORA ELGA"
+              }
+            },
+            {
+              "id": "3",
+              "label": "LOTE-003 MANZANA 8",
+              "address": "Morbi mauris risus, porta at vehicula",
+              "last_measure": 0,
+              "client": {
+                "rowid": "31",
+                "name": "TCM MANTENIMIENTO Y CONSTRUCCION"
+              }
+            },
+            {
+              "id": "4",
+              "label": "LOTE-004 MANZANA 8",
+              "address": "Nunc laoreet nibh vitae felis hendrerit egestas.",
+              "last_measure": 0,
+              "client": {
+                "rowid": "15",
+                "name": "ALLAM ENRIQUE JAIME CARRILLO"
+              }
+            },
+            {
+              "id": "5",
+              "label": "LOTE-005 MANZANA 8",
+              "address": "Donec non rhoncus",
+              "last_measure": 0,
+              "client": {
+                "rowid": "26",
+                "name": "AHIDEE GUADALUPE AVILA BALLESTEROS"
+              }
+            },
+            {
+              "id": "6",
+              "label": "LOTE-006 MANZANA 8",
+              "address": "Vivamus aliquet mi vitae erat consequat, nec venenatis magna ultricies. Curabitur molestie ex quis risus fringilla, vel euismod urna sagittis.",
+              "last_measure": 0,
+              "client": {
+                "rowid": "12",
+                "name": "VILLAESCUZA CONSTRUCCIONES Y MANTENIMIENTO"
+              }
+            },
+            {
+              "id": "7",
+              "label": "LOTE-007 MANZANA 8",
+              "address": "Maecenas sit amet #7",
+              "last_measure": 0,
+              "client": {
+                "rowid": "36",
+                "name": "SERGIO CAMARILLO GUZMAN"
+              }
+            }
+          ]
+        }
+    ]
+}

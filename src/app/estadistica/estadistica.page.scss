@@ -1,0 +1,113 @@
+
+ion-toolbar img{
+    height: 37px;
+    width: auto;
+    padding-right: 15px;
+}
+ion-container{
+    font-size:16px;
+    
+    //376px
+    //360px
+    //280px
+}
+.container{
+    height: 200px;
+    width: auto;
+    margin: 5px 5px 20px 5px;
+    border-radius: 30px;
+    color: #fff;
+    font-family: 'Segoe UI';
+    font-weight: 600; 
+    display: flex;
+    padding: 10px;
+    @media screen and (max-width: 390px){
+        font-size:14px;  
+    }
+    @media screen and (max-width: 280px){
+        font-size:10px;  
+    }
+}
+
+.text{
+    padding:20px;  
+    width: 50%;
+}
+.tx1{
+    //font-size: 30px;
+    font-size: 2em;
+}
+.tx2{
+    //font-size: 80px;
+    font-size: 5em;
+   // font-size:10vh;
+    position:relative;
+    left: 20%;
+}
+.image{
+    width:50%;
+}
+.image img{
+   height: 100%;
+   width: 100%;
+   object-fit: cover;
+ 
+}
+ion-label{
+    display: block;
+   
+}
+
+.small{
+    //padding:20px;  
+    width: 50%;
+    border-radius: 30px;
+    margin-left:5px;
+    margin-right: 5px;
+}
+
+.text-large{
+    height: 40px;
+    padding: 15px;
+    margin-left: 10px;
+    position: relative;
+    bottom: 15px;
+    right:10px;
+}
+.orange{
+    background-color:#F66B00;  
+    background-image: url(/assets/logos/lmorange.png);
+    background-position: right center;
+    background-size: auto 200px;
+    background-repeat: no-repeat;
+}
+.purple{
+    background-color:#5D438F;
+    background-image: url(/assets/logos/lpurple_462e86.png);
+    background-position: right center;
+    background-size: auto 150px;
+    background-repeat: no-repeat;
+   
+}
+.blue{
+    background-color:#4475B2;
+    background-image: url(/assets/logos/lblue_365d89.png);
+    background-position: right center;
+    background-size: auto 150px;
+    background-repeat: no-repeat;
+}
+.green{
+    background-color:#6DB467;
+    background-image: url(/assets/logos/lgreen_42793c.png);
+    background-position: right center;
+    background-size: auto 150px;
+    background-repeat: no-repeat;
+    
+}
+.red{
+    background-color:#CD4051;
+    background-image: url(/assets/logos/lred_c80631.png);
+    background-position: right center;
+    background-size: auto 150px;
+    background-repeat: no-repeat;
+}

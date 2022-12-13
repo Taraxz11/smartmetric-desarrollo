@@ -4,49 +4,23 @@
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title>Pendientes</ion-title>
+    <img slot=end src="/assets/logos/figura-blanco.png">
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-
       <ion-title size="large">Pendientes</ion-title>
-
     </ion-toolbar>
   </ion-header>
 
-  <ion-list>  
-            <ion-card [routerLink]="['/capturar', user.ref]" *ngFor="let user of users">
-              <ion-card-subtitle id="id_user">ID {{user.ref}}</ion-card-subtitle>
-
-              <ion-card-header>
-                <ion-grid>
-                  <ion-row>
-                    <ion-col class="row_mar">
-                      <ion-card-subtitle>Dirección</ion-card-subtitle>
-                      <ion-card-title>{{user.address}}</ion-card-title><br>
-                      </ion-col>
-                      <ion-col>
-                      <ion-card-subtitle>Nombre</ion-card-subtitle>
-                      <ion-card-title>{{user.name}}</ion-card-title>
-                    </ion-col>
-                  </ion-row>
-                  <ion-row>
-                    <ion-col class="row_mar">
-                      <ion-card-subtitle>Medidor</ion-card-subtitle>
-                      <ion-card-title>{{user.measurer}}</ion-card-title><br>
-                      </ion-col>
-                      <ion-col>
-                      <ion-card-subtitle>Mes de lectura</ion-card-subtitle>
-                      <ion-card-title>{{user.month}}</ion-card-title>
-                    </ion-col>
-                  </ion-row>
-                </ion-grid>
-              </ion-card-header>
-            </ion-card>
-
+  <ion-list  *ngIf="products">
+    <app-cards-products [routerLink]="['/capturar', i]" [client]="client" *ngFor="let client of products; let i = index"></app-cards-products>
   </ion-list>
-    
-  
+
+    <div class="button">  <ion-button *ngIf="showButton()" size="large" (click)="download()">Descargar ruta</ion-button>
+    </div>
+   
 </ion-content>
+

@@ -1,15 +1,10 @@
 ion-toolbar ion-button{
-
-    --background: #fff;
-    --color: #5B5858;
     --box-shadow:none;
     text-transform: none;
-    font-family: 'Segoe UI';
-    --color:#6C7572;
     font-size: 15px;
 }
 ion-toolbar img{
-    height: 45px;
+    height: 37px;
     width: auto;
     padding-right: 15px;
 }
@@ -22,6 +17,7 @@ ion-content{
 .idcaptura{
     margin-left:70%;
     font-weight: 600;
+    margin-top: 12px;
 }
 .contenedor-datos{
     margin: 30px;
@@ -34,6 +30,7 @@ ion-content{
     width: 100px;
     flex-grow: 1;
     font-weight: 600;
+    margin-bottom: 10px;
 }
 .contenedor-datos .cajita .dos{
     width: 100px;
@@ -41,8 +38,8 @@ ion-content{
 }
 
 .captura{
-    width: 80%;
-    margin-top: 15px;
+    //width: 80%;
+    margin-top: 35px;
     font-weight: 600;
 }
 
@@ -64,11 +61,13 @@ ion-content{
     color:#5B5858;
     --border-color:#5B5858;
     --border-style: solid;
-    font-size: 18px;
+    font-size: 25px;
+    //font-size: 18px
+
 }
 .buttons {
     text-align:center;
-    margin-top: 20px;
+    margin-top: 40px;
     margin-bottom:20px;
 }
 .buttons .visualizar  {
@@ -82,14 +81,20 @@ ion-button{
     --border-radius:15px;
     font-size: 18px;
 }
-.anomalias{
-    width: 80%;
-    
+ion-select{
+    //width: 80%;
+    --placeholder-color:#5B5858;
+    font-weight: 600;
+    font-family: 'Segoe UI';
+   --placeholder-opacity: 8;
+    font-size: 18px;
+
 }
 ion-item ion-label{
     font-family: 'Segoe UI';
     --color: #5B5858;
     font-weight: 400;
+    
 }
 
 .swiper-slide-active{

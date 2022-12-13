@@ -27,7 +27,7 @@
   }
 
   ion-icon{
-    padding: 15px
+    padding: 15px;
   }
   ion-button{
     --margin: 70px auto;
@@ -45,3 +45,6 @@
     padding: 10px;
   }
 
+ion-item ion-input{
+  --padding-start: 10px;
+}

@@ -1,0 +1,54 @@
+{
+    "help":[
+        { "id":0, 
+         "name":"Inicio de sesión",
+         "description":["El usuario y la contraseña son proporcionados por la empresa. Debe contar con internet para iniciar sesión."]
+         },
+         {"id":1, 
+          "name":"Credenciales incorrectas",
+          "description":["El usuario o la contraseña ingresados al iniciar sesión son incorrectos."]
+         },
+         { "id":2,
+           "name":"Datos incompletos",
+           "description":["Los campos de usuario y contraseña son obligatorios. La contraseña debe tener un mínimo de 8 caracteres."]
+         },
+         { "id":3,
+           "name":"Error en conexión",
+           "description":["Su conexión a internet es inestable o inexistente. Se recomienda verificar su conexión a internet."]
+         },  
+        {"id":4, 
+         "name":"Ha ocurrido un error",
+         "description":["Se debe a un error de respuesta del servidor. Intente realizar su petición de nuevo."]
+         },
+         {"id":5, 
+         "name":"Ruta no disponible",
+         "description":["El usuario no cuenta con una ruta asignada o se está haciendo actualización de la ruta. Inténtelo más tarde."]
+         },
+         {"id":6, 
+         "name":"¿Captura válida?",
+         "description":["La lectura ingresada debe ser mayor o igual a la anterior.",
+         "La lectura ingresada y la confirmación deben ser iguales.",
+         "No se permite ingresar letras o caracteres especiales en la lectura.",
+         "La sección de anomalías es opcional.",
+         "La evidencia fotográfica es obligatoria.",
+         "Debe existir un mínimo de 2 fotografías. Debe constar de una foto de la ubicación y una del medidor."
+         ]}, 
+         {  "id":7,
+            "name":"La lectura ingresada no coincide",
+            "description":["La lectura ingresada y la confirmación deben ser iguales."]
+         },
+         {  "id":8,
+            "name":"La lectura ingresada es menor a la anterior",
+            "description":["La lectura ingresada debe ser mayor o igual a la anterior."]
+         },
+         {  "id":9,
+            "name":"Sobre ruta...",
+            "description":["La sección ruta muestra la información de la persona asignada a la ruta y los lotes por los que se compone la misma."]
+         },
+         {  "id":10,
+            "name":"Sobre estadísticas...",
+            "description":["La sección estadísticas muestra la información del recorrido: los lugares pendientes por realizar captura, el avance de las capturas realizadas, anomalías detectadas según las capturas realizada, y una comparación del consumo de agua."]
+         }
+
+    ]
+}

@@ -19,9 +19,10 @@
           <ion-label class="etiqueta">Ingresar contraseña</ion-label>
           <ion-item>
             <ion-icon name="lock-closed"></ion-icon>
-            <ion-input  clearInput minLength="8" formControlName="password" placeholder="Contraseña" class="primary-input"></ion-input>
+            <ion-input [type]="type" clearInput minLength="8" formControlName="password" placeholder="Contraseña" class="primary-input"></ion-input>
+            <ion-icon [name]="eye" (click)="visible()"></ion-icon>
           </ion-item>    
-          <ion-button (click)="login()" color="primary" size="large" >Inciar sesión</ion-button>
+          <ion-button (click)="login()" color="primary" size="large" >Iniciar sesión</ion-button>
 
     </div>
 

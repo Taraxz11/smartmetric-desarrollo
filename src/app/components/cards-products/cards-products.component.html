@@ -1,0 +1,25 @@
+<ion-card >
+  <ion-card-subtitle id="id_user">ID {{client.id}}</ion-card-subtitle>
+  <ion-card-header>
+        
+        <div class="cajita">
+          <div class="uno">
+            <ion-card-subtitle>Dirección</ion-card-subtitle>
+            <ion-card-title>{{client.address}}</ion-card-title></div>
+          <div class="dos">
+            <ion-card-subtitle>Nombre</ion-card-subtitle>
+          <ion-card-title>{{client.client.name}}</ion-card-title>
+          </div>
+        </div>
+        <div class="cajita">
+          <div class="uno">
+            <ion-card-subtitle>Lote</ion-card-subtitle>
+            <ion-card-title>{{client.label}}</ion-card-title>
+          </div>
+          <div class="dos">
+            <ion-card-subtitle>Mes de lectura</ion-card-subtitle>
+            <ion-card-title>{{currentMonth}}</ion-card-title>
+          </div>
+        </div> 
+  </ion-card-header>        
+ </ion-card>    

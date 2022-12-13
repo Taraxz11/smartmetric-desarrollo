@@ -4,9 +4,69 @@
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title>Estadística</ion-title>
+    <img slot=end src="/assets/logos/figura-blanco.png">
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+ <div class="container orange">
+  <ion-grid [fixed]="true">
+    <ion-row>
+      <ion-col>
+       <ion-row><ion-col><ion-label class="tx1">Ruta {{stats.name}}</ion-label></ion-col></ion-row>
+       <ion-row><ion-col><ion-label class="tx2">{{stats.route}}</ion-label></ion-col></ion-row>
+      </ion-col>
+      <ion-col></ion-col>
+    </ion-row>
+     </ion-grid>
+ </div>
 
+ <div class="container">
+  <div class="purple small">
+   <ion-grid>
+    <ion-row><ion-col><ion-label class="tx1">Pendientes</ion-label></ion-col></ion-row>
+    <ion-row><ion-col><ion-label class="tx2">{{stats.incomplete}}</ion-label></ion-col></ion-row>
+   </ion-grid>
+  </div>
+  <div class="blue small">
+    <ion-grid [fixed]="true">
+      <ion-row><ion-col><ion-label class="tx1">Realizados</ion-label></ion-col></ion-row>
+      <ion-row><ion-col><ion-label class="tx2">{{stats.complete}}</ion-label></ion-col></ion-row>
+    </ion-grid>
+  </div>
+ </div>
+ 
+ <div class="container green">
+  <ion-grid [fixed]="true">
+    <ion-row>
+      <ion-col><ion-label class="tx1 text-large">Último mes</ion-label>    
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col><ion-label class="tx2">{{stats.lastMonth}} L</ion-label></ion-col>
+    </ion-row>
+  </ion-grid> 
+ </div>
+ <div class="container red">
+  <ion-grid [fixed]="true">
+    <ion-row>
+      <ion-col><ion-label class="tx1 text-large">Consumo actual</ion-label>    
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col><ion-label class="tx2">{{stats.currentMonth}} L</ion-label></ion-col>
+    </ion-row>
+  </ion-grid> 
+ </div>
+ <div class="container blue">
+  <ion-grid [fixed]="true">
+    <ion-row>
+      <ion-col><ion-label class="tx1 text-large">Anomalías detectadas</ion-label>    
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col><ion-label class="tx2">{{stats.anomalies}}</ion-label></ion-col>
+    </ion-row>
+  </ion-grid> 
+ </div>
 </ion-content>

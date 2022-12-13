@@ -3,7 +3,16 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  _url:'https://real14.sysbiterp.com/api/index.php/',
+  endpoint : { login: 'login',
+              anomaly: 'smartmetricapi/getAnomalys',
+              employe: 'users/login/',
+              users: 'smartmetricapi/employe/',
+              readings :'smartmetricapi/lecturepros',
+              stats:'smartmetricapi/statsservice',
+              routeInfo: 'smartmetricapi/userrouteinfo/'
+            }
 };
 
 /*

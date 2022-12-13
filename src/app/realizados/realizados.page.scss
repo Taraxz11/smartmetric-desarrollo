@@ -1,13 +1,61 @@
-ion-toolbar ion-button{
-
-    --background: #fff;
-    --color: #5B5858;
-    --box-shadow:none;
-    text-transform: none;
-}
-
-ion-toolbar img{
-    height: 45px;
+  ion-toolbar img{
+    height: 37px;
     width: auto;
     padding-right: 15px;
-}
+  }
+  .noReading{
+    text-align: center;
+    padding-top: 50%;
+  }
+
+  #id_user{
+    margin-left: 27px;
+    margin-top: 15px;
+    font-weight: bold;
+}    
+  ion-card{
+    --background:#fff;
+    margin-bottom: 15px;
+    border-radius: 30px;
+    box-shadow: 3px 12px 9px 0px rgba(161,150,150,0.75);
+    -webkit-box-shadow: 3px 12px 9px 0px rgba(161,150,150,0.75);
+    -moz-box-shadow: 3px 12px 9px 0px rgba(161,150,150,0.75);
+    border-top: 10px solid #F66B00;
+    border-bottom: 10px none #F66B00;
+    border-left: 10px solid #F66B00;
+   
+    /* box-shadow: -9px -9px 0px -1px rgba(246,107,0,1);
+    -webkit-box-shadow: -9px -9px 0px -1px rgba(246,107,0,1);
+    -moz-box-shadow: -9px -9px 0px -1px rgba(246,107,0,1);
+    --background: rgb(255, 250, 244);
+    */
+    background-image: url(/assets/logos/trans.png);  
+    background-repeat: no-repeat;
+    background-position: 80% 90%;
+    background-size: auto 100px;
+} //color smartmetric rgb  ---> rgb(246,107,0)    anterior ---->rgba(247,159,28,1);
+  
+  ion-card-subtitle{
+    margin-bottom:5px;
+    font-family: 'Segoe UI';
+  }
+  ion-card-title{
+    font-family: 'Segoe UI';  
+  }
+  .cajita{
+    display: flex;
+    margin: 20px;
+  }
+  .cajita .uno{
+    font-style: bold;
+    width: 100px;
+    flex-grow: 2;
+    font-weight: 600;
+    margin-right: 10px;
+  }
+   .cajita .dos{
+    width: 100px;
+    flex-grow: 2;
+  }
+
+  

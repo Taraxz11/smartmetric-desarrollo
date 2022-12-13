@@ -1,0 +1,14 @@
+{
+    "anomalias" : [
+        { "id": "1", "name":"Medidor con obstáculos"},
+        { "id": "2", "name":"Sin medidor"},
+        { "id": "3", "name":"Medidor dañado"},
+        { "id": "4", "name":"Medidor frenado"},
+        { "id": "5", "name":"Medidor invertido"},
+        { "id": "6", "name":"Mal enrutado"},
+        { "id": "7", "name":"Numero equivocado"}
+    ]
+         
+     
+
+}

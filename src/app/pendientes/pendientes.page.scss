@@ -1,3 +1,9 @@
+
+ion-toolbar img{
+  height: 37px;
+  width: auto;
+  padding-right: 15px;
+}
 #container {
     text-align: center;
   
@@ -65,7 +71,46 @@ ion-card{
   --background: rgb(255, 250, 244);
   margin-bottom: 15px;
   border-radius: 20px;
-  box-shadow: -9px -9px 0px -1px rgba(247,159,28,1);
--webkit-box-shadow: -9px -9px 0px -1px rgba(247,159,28,1);
--moz-box-shadow: -9px -9px 0px -1px rgba(247,159,28,1);
+  box-shadow: -9px -9px 0px -1px rgba(246,107,0,1);
+-webkit-box-shadow: -9px -9px 0px -1px rgba(246,107,0,1);
+-moz-box-shadow: -9px -9px 0px -1px rgba(246,107,0,1);
+} //color smartmetric rgb  ---> rgb(246,107,0)    anterior ---->rgba(247,159,28,1);
+
+ion-card-subtitle{
+  margin-bottom:5px;
 }
+.cajita{
+  display: flex;
+  margin: 20px;
+}
+.cajita .uno{
+  font-style: bold;
+  width: 100px;
+  flex-grow: 2;
+  font-weight: 600;
+  margin-right: 10px;
+}
+ .cajita .dos{
+  width: 100px;
+  flex-grow: 2;
+}
+
+.button{
+  position: relative;
+  top:40%;
+  left:13%;
+}
+.button ion-button{
+ 
+    --background:#fff;
+    --color:#F66B00;
+    font-family: 'Segoe UI';
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: none;
+    --border-radius:15px;
+    
+}
+
+
+

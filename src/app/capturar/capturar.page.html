@@ -1,91 +1,82 @@
-<ion-toolbar>
- <ion-button slot="start" [routerLink]="['/pendientes']">
+<ion-toolbar color="primary">
+ <ion-button color="primary" slot="start" [routerLink]="['/pendientes']">
        <ion-icon slot="start" name="chevron-back-outline"></ion-icon>
        Volver
  </ion-button>
- <img slot=end src="/assets/logos/figura.png">
+ <img slot=end src="/assets/logos/figura-blanco.png">
 </ion-toolbar>
 
 <ion-content>
-
-        <ion-label class="idcaptura">#123123{{idCaptura}}</ion-label>
-  <div class="contenedor-datos"> 
-              <div class="cajita">
-            <div class="uno"><ion-label>ID</ion-label></div>
-            <div class="dos"><ion-label>#1231{{ID}}</ion-label></div>
-              </div>
-              <div class="cajita">
+        
+   <div class="contenedor-datos"> 
+      <div class="cajita">
+              <div class="uno"><ion-label>ID</ion-label></div>
+            <div class="dos"><ion-label>{{client.id}}</ion-label></div>
+      </div>
+      <div class="cajita">
             <div class="uno" ><ion-label>Nombre</ion-label></div>
-            <div class="dos"><ion-label>{{nombre}}</ion-label></div>
-              </div>
-
-              <div class="cajita">
-                  <div class="uno"> <ion-label style="font-weight:600;">Dirección</ion-label> </div>
+            <div class="dos"><ion-label>{{client.client.name}}</ion-label></div>
+      </div>
+      <div class="cajita">
+                  <div class="uno"> <ion-label>Dirección</ion-label> </div>
                   <div class="dos">
-                     <ion-label>Benjamin Chaparro{{calle}}</ion-label><br>
-                     <ion-label>#108 {{numero}}</ion-label><br>
-                     <ion-label>Col. Centro {{colonia}}</ion-label>
+                     <ion-label>{{client.address}}</ion-label>
                   </div>    
-                </div>
-              
-              <div class="cajita">
+      </div>        
+      <div class="cajita">
                 <div class="uno"><ion-label>Lectura anterior</ion-label></div>
-                <div class="dos"> <ion-label>54644768779</ion-label></div>
-              </div>  
-              <div [formGroup]="fgCaptura" class="captura">
+                <div class="dos"> <ion-label>{{client.last_measure}}</ion-label></div>
+      </div>  
+      <div [formGroup]="fgReading"  class="captura">
                 <ion-label>Ingresar lectura</ion-label>
-                <ion-input formControlName="lectura" type="password"></ion-input>
+                <ion-input formControlName="current" type="password" pattern="[0-9]+"></ion-input>
                 <ion-label>Confirmar lectura</ion-label>
-                <ion-input formControlName="confirmar" type="password"></ion-input>
-                </div>
-               
-                <div class="anomalias">
-                   <ion-accordion-group>
-                    <ion-accordion value="first">
-                      <ion-item slot="header" color="light">
-                        <ion-label>Anomalías</ion-label>
-                      </ion-item>
-                      <div class="ion-padding" slot="content">
-                        <ion-list>
-                          <ion-item *ngFor="let entry of form">
-                            <ion-label>{{entry.val}}</ion-label>
-                            <ion-checkbox slot="end" [(ngModel)]="entry.isChecked"></ion-checkbox>
-                          </ion-item>
-                        </ion-list>
-                      </div>
-                    </ion-accordion>
-          
-                  </ion-accordion-group>
-                </div>
-  </div>
+                <ion-input formControlName="confirm" type="password" pattern="[0-9]+"></ion-input>
+      </div>
+      <div class="anomalias">
+        <ion-list>
+          <ion-item>
+            <ion-select
+              
+              placeholder="Seleccione anomalía"
+              (ionChange)="handleChange($event)"
+              
+            >
+            <!--               <ion-select-option *ngFor="let anomaly of details" value="{{anomaly.rowid}}">{{anomaly.label}}</ion-select-option>
+ --><!--multiple="true"-->
+              <ion-select-option *ngFor="let anomaly of details" [value]="anomaly">{{anomaly.label}}</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-list>
+      </div>  
+   </div>
 
 
         
         <div class="foto">
           <ion-label>Capturar</ion-label><br>
-         <ion-button size="large"><ion-icon name="camera-outline"></ion-icon></ion-button>  
+         <ion-button size="large" (click)="takePicture()"><ion-icon name="camera-outline"></ion-icon></ion-button>  
         </div>
        
         <div class="galeria">
-         
-            <ion-slides [options]="option" class="ion-margin-top">
-               <ion-slide>
-                <ion-card>
-                  <img src="/assets/logos/smartmetric-original.png">
-                </ion-card>
-               </ion-slide>
-               <ion-slide>
-                <ion-card>
-                  <img src="/assets/logos/figura.png">
-                </ion-card>
-               </ion-slide>
-
-            </ion-slides>
-
-        </div>
+ 
+          <ion-slides [options]="option" class="ion-margin-top">
+             <ion-slide *ngFor="let photo of image">
+              <ion-card >
+                <img *ngIf="image" src="{{photo}}" >
+              </ion-card>
+             </ion-slide>
+      
+          </ion-slides>
+      
+      </div>
         <div class="buttons">
-           <ion-button class="visualizar" [routerLink]="['/reporte']" size="large">Visualizar</ion-button>
-           <ion-button (click)="validacion()" size="large">Finalizar</ion-button>
+           <ion-button class="visualizar" (click)="report()" size="large">Visualizar</ion-button>
+           <ion-button (click)="validation()" size="large">Finalizar</ion-button>
 
         </div>
 </ion-content>
+
+<!--
+  [routerLink]="['/reporte', id]"
+-->

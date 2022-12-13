@@ -1,95 +1,65 @@
-<ion-toolbar>
-  <ion-button slot="start" [routerLink]="['/realizados']">
+<ion-toolbar color="primary">
+  <ion-button color="primary" slot="start" [routerLink]="['/realizados']">
     <ion-icon slot="start" name="chevron-back-outline"></ion-icon>
     Volver
   </ion-button>
-  <img slot=end src="/assets/logos/figura.png">
+  <img slot=end src="/assets/logos/figura-blanco.png">
 </ion-toolbar>
 
 <ion-content>
-  <ion-label class="idcaptura">#123123{{idCaptura}}</ion-label>
 
   <div class="galeria">
-
+         
     <ion-slides [options]="option" class="ion-margin-top">
-      <ion-slide>
-        <ion-card>
-          <img src="/assets/logos/smartmetric-original.png">
+       <ion-slide  *ngFor="let photo of currentReading.images">
+        <ion-card *ngIf="currentReading.images">
+          <img src="{{photo}}">
         </ion-card>
-      </ion-slide>
-      <ion-slide>
+       </ion-slide>
+       <ion-slide *ngIf="!currentReading.images">
         <ion-card>
           <img src="/assets/logos/figura.png">
         </ion-card>
-      </ion-slide>
+       </ion-slide>
 
     </ion-slides>
 
+</div>
+
+  <div class="contenedor-datos"> 
+    <div class="cajita">
+      <div class="uno"><ion-label>ID</ion-label></div>
+      <div class="dos"><ion-label>{{currentReading.id}}</ion-label></div>
+    </div>
+    <div class="cajita">
+      <div class="uno"><ion-label>Nombre</ion-label></div>
+      <div class="dos"><ion-label>{{currentReading.name}}</ion-label></div>
+    </div>
+    <div class="cajita">
+      <div class="uno"><ion-label>Lote</ion-label></div>
+      <div class="dos"><ion-label>{{currentReading.label}}</ion-label></div>
+    </div>
+    <div class="cajita">
+      <div class="uno"><ion-label>Dirección</ion-label></div>
+      <div class="dos"><ion-label>{{currentReading.address}}</ion-label></div>
+    </div>
+    <div class="cajita">
+      <div class="uno"><ion-label>Fecha</ion-label></div>
+      <div class="dos"><ion-label>{{currentReading.date}}</ion-label></div>
+    </div>
+    <div class="cajita"  *ngIf="currentReading.anomalies">
+      <div class="uno"><ion-label>Anomalías</ion-label></div>
+      <div class="dos">
+        <div><ion-label>{{currentReading.anomalies}}</ion-label></div></div>
+    </div>
+    <div class="cajita">
+      <div class="uno"><ion-label>Lectura Anterior</ion-label></div>
+      <div class="dos"><ion-label>{{currentReading.last_measure}}</ion-label></div>
+    </div>
+    <div class="cajita">
+      <div class="uno"><ion-label>Lectura Actual</ion-label></div>
+      <div class="dos"><ion-label>{{currentReading.current}}</ion-label></div>
+    </div> 
   </div>
 
-  <div class="contenedor-datos">
-    <div class="cajita">
-      <div class="uno">
-        <ion-label>ID</ion-label>
-      </div>
-      <div class="dos">
-        <ion-label>{{ID}}</ion-label>
-      </div>
-    </div>
-    <div class="cajita">
-      <div class="uno">
-        <ion-label>Nombre</ion-label>
-      </div>
-      <div class="dos">
-        <ion-label>{{nombre}}</ion-label>
-      </div>
-    </div>
-    <div class="cajita">
-      <div class="uno">
-        <ion-label>Captura</ion-label>
-      </div>
-      <div class="dos">
-        <ion-label>{{calle}} #{{numero}} {{Colonia}} {{fecha}} {{hora}}</ion-label>
-      </div>
-    </div>
-    <div class="cajita">
-      <div class="uno">
-        <ion-label>Lectura</ion-label>
-      </div>
-      <div class="dos">
-        <ion-label>{{lectura}}</ion-label>
-      </div>
-    </div>
-    <div class="cajita">
-      <div class="uno">
-        <ion-label>Lect. Anterior</ion-label>
-      </div>
-      <div class="dos">
-        <ion-label>{{lecAnterior}}</ion-label>
-      </div>
-    </div>
-    <div class="cajita">
-      <div class="uno">
-        <ion-label>Consumo</ion-label>
-      </div>
-      <div class="dos">
-        <ion-label>{{consumo}}</ion-label>
-      </div>
-    </div>
-    <div class="cajita">
-      <div class="uno">
-        <ion-label>Total</ion-label>
-      </div>
-      <div class="dos">
-        <ion-label>{{total}}</ion-label>
-      </div>
-    </div>
-  </div>
-
-  <!--<div class="imprimir">
-    <ion-button >Imprimir</ion-button>
-
-  </div>
-  PENDIENTE
--->
 </ion-content>

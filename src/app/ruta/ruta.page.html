@@ -4,33 +4,52 @@
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title>Ruta</ion-title>
+    <img slot=end src="/assets/logos/figura-blanco.png">
+
   </ion-toolbar>
 </ion-header>
 
 <ion-content> 
 
   <div class="card-cont">
-    <ion-card>
+
+    <ion-card color="primary">
+      
       <ion-card-header>
-        <ion-card-title>Ruta #001 </ion-card-title>
+        <center> 
+          <img src="assets/logos/figura-blanco.png" width="70px" height="70px" />
+          <ion-card-subtitle>Trabajador:</ion-card-subtitle>
+          <ion-card-title>Jose Perez</ion-card-title>
+         </center>
+        
       </ion-card-header>
-    
+
+    </ion-card>
+
+    <div class="icon_content">
+      <img src="assets/icon/icon_avatar.jpg">
+    </div>
+  
+    <div class="contenedor_ruta">
       <ion-card>
         <ion-card-header>
-          <ion-card-title>Capturista: Javier perez</ion-card-title>
-          <ion-card-title>Tiempo estimado: 2 hrs</ion-card-title>
+          <ion-card-title>Ruta 001</ion-card-title>
+          <ion-card-subtitle>Sector: CENTRO</ion-card-subtitle>
         </ion-card-header>
+        <ion-card-content>
+          <ion-list *ngIf="lotes">
+            <ion-item *ngFor="let lote of lotes">
+              <ion-thumbnail slot="start">
+                <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
+              </ion-thumbnail>
+              <ion-label>{{lote.label}}</ion-label> 
+            </ion-item>
+          </ion-list>
+        </ion-card-content>
       </ion-card>
-    </ion-card><br>
-    <ion-card>
-      <img src="assets/icon/map.PNG" />
-      <ion-card-header>
-        <ion-card-title>Ruta.1</ion-card-title>
-        <ion-card-title>Direccion: pueblo de alamos</ion-card-title>
-      </ion-card-header>
-    </ion-card>
+    </div>
+    
+    
   </div>
-
-  <center><button class="btn_cap">Descargar ruta</button></center>
   
 </ion-content>

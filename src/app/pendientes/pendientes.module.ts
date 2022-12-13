@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { PendientesPageRoutingModule } from './pendientes-routing.module';
 
 import { PendientesPage } from './pendientes.page';
+import { ComponentsModule } from '../components/components.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    PendientesPageRoutingModule
+    PendientesPageRoutingModule,
+    ComponentsModule
   ],
   declarations: [PendientesPage]
 })
