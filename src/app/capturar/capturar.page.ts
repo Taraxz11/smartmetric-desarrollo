@@ -216,7 +216,7 @@ export class CapturarPage implements OnInit {
       label: this.products[this.id].label,
       address: this.products[this.id].address,
       last_measure:this.products[this.id].last_measure,
-      current : this.current,
+      current : this.current||0,
       anomalies : this.descAnomalies,
       date : this.dateSpanish(this.date.toString()),
       client :       {
@@ -240,18 +240,18 @@ export class CapturarPage implements OnInit {
       0:'Domingo'
      } 
      let month = {
-      1:'Enero',
-      2:'Febrero',
-      3:'Marzo',
-      4:'Abril',
-      5:'Mayo',
-      6:'Junio',
-      7:'Julio',
-      8:'Agosto',
-      9:'Septiembre',
-      10:'Octubre',
-      11:'Noviembre',
-      12:'Diciembre'
+      0:'Enero',
+      1:'Febrero',
+      2:'Marzo',
+      3:'Abril',
+      4:'Mayo',
+      5:'Junio',
+      6:'Julio',
+      7:'Agosto',
+      8:'Septiembre',
+      9:'Octubre',
+      10:'Noviembre',
+      11:'Diciembre'
     }
     return `${ day[date.getDay()]}, ${date.getDate()} de ${month[date.getMonth()]} del ${date.getFullYear()}` 
   }

@@ -9,92 +9,16 @@
 </ion-header>
 
 <ion-content>
-
-  <!--
-    <center>
-  <button class="btn_cap">No descargo la ruta</button> <br>
-  <button class="btn_cap">No se toma la imagen</button><br>
-  <button class="btn_cap">No se conecta a la impresora</button><br>
-  <button class="btn_cap">Error al capturar</button><br>
-  <button class="btn_cap">Guía Smartmetric</button><br>
-  </center>
-  -->
   
   <ion-accordion-group>
-    <br>
-    <ion-accordion>
+    <ion-accordion  *ngFor="let item of help">
       <ion-item slot="header" color="light">
-        <ion-label>No descargo la ruta</ion-label>
+        <ion-label>{{item.name}}</ion-label>
       </ion-item>
-      <div class="ion-padding" slot="content">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam nobis corporis id aliquam atque omnis rem, qui accusamus quis. Aliquid fugit, aut inventore labore vitae minima excepturi dolore ipsum delectus. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque aliquam delectus ab quisquam, quaerat velit veritatis nisi molestias, repellat cupiditate nobis fugiat atque quas veniam rerum corrupti minima a commodi.
-      </div>
-    </ion-accordion> 
-    <br>
-    <ion-accordion >
-      <ion-item slot="header" color="light">
-        <ion-label>No se toma la fotografia</ion-label>
-      </ion-item>
-      <div class="ion-padding" slot="content">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum perspiciatis suscipit quos fuga quia, doloremque maxime dignissimos. Dolor sapiente illo assumenda. Placeat neque libero rem nostrum vel, consequuntur aliquam debitis! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque aliquam delectus ab quisquam, quaerat velit veritatis nisi molestias, repellat cupiditate nobis fugiat atque quas veniam rerum corrupti minima a commodi.
-      </div>
-    </ion-accordion>
-    <br>
-    <ion-accordion >
-      <ion-item slot="header" color="light">
-        <ion-label>Error al capturar</ion-label>
-      </ion-item>
-      <div class="ion-padding" slot="content">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque aliquam delectus ab quisquam, quaerat velit veritatis nisi molestias, repellat cupiditate nobis fugiat atque quas veniam rerum corrupti minima a commodi. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque aliquam delectus ab quisquam, quaerat velit veritatis nisi molestias, repellat cupiditate nobis fugiat atque quas veniam rerum corrupti minima a commodi.
-      </div>
-    </ion-accordion>
-    <br>
-    <ion-accordion >
-      <ion-item slot="header" color="light">
-        <ion-label>No envia los datos</ion-label>
-      </ion-item>
-      <div class="ion-padding" slot="content">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque aliquam delectus ab quisquam, quaerat velit veritatis nisi molestias, repellat cupiditate nobis fugiat atque quas veniam rerum corrupti minima a commodi. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque aliquam delectus ab quisquam, quaerat velit veritatis nisi molestias, repellat cupiditate nobis fugiat atque quas veniam rerum corrupti minima a commodi.
-      </div>
-    </ion-accordion>
-    <br>
-    <ion-accordion >
-      <ion-item slot="header" color="light">
-        <ion-label>Se almacenaron repetidas veces</ion-label>
-      </ion-item>
-      <div class="ion-padding" slot="content">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque aliquam delectus ab quisquam, quaerat velit veritatis nisi molestias, repellat cupiditate nobis fugiat atque quas veniam rerum corrupti minima a commodi. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque aliquam delectus ab quisquam, quaerat velit veritatis nisi molestias, repellat cupiditate nobis fugiat atque quas veniam rerum corrupti minima a commodi.
-      </div>
-    </ion-accordion>
-    <br>
-    <ion-accordion >
-      <ion-item slot="header" color="light">
-        <ion-label>Guia Smartmetric</ion-label>
-      </ion-item>
-      <div class="ion-padding" slot="content">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque aliquam delectus ab quisquam, quaerat velit veritatis nisi molestias, repellat cupiditate nobis fugiat atque quas veniam rerum corrupti minima a commodi. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque aliquam delectus ab quisquam, quaerat velit veritatis nisi molestias, repellat cupiditate nobis fugiat atque quas veniam rerum corrupti minima a commodi.
-      </div>
-    </ion-accordion>
-    <br>
-    <ion-accordion >
-      <ion-item slot="header" color="light">
-        <ion-label>Se almacenaron repetidas veces</ion-label>
-      </ion-item>
-      <div class="ion-padding" slot="content">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque aliquam delectus ab quisquam, quaerat velit veritatis nisi molestias, repellat cupiditate nobis fugiat atque quas veniam rerum corrupti minima a commodi. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque aliquam delectus ab quisquam, quaerat velit veritatis nisi molestias, repellat cupiditate nobis fugiat atque quas veniam rerum corrupti minima a commodi.
-      </div>
-    </ion-accordion>
-    <br>
-    <ion-accordion >
-      <ion-item slot="header" color="light">
-        <ion-label>Guia Smartmetric</ion-label>
-      </ion-item>
-      <div class="ion-padding" slot="content">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque aliquam delectus ab quisquam, quaerat velit veritatis nisi molestias, repellat cupiditate nobis fugiat atque quas veniam rerum corrupti minima a commodi. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque aliquam delectus ab quisquam, quaerat velit veritatis nisi molestias, repellat cupiditate nobis fugiat atque quas veniam rerum corrupti minima a commodi.
-      </div>
-    </ion-accordion>
-    <br>
-    
+      <div class="description" slot="content" *ngFor="let desc of item.description">
+        <ion-label>{{desc}}</ion-label> 
+      </div> 
+    </ion-accordion>  
   </ion-accordion-group>
   
 

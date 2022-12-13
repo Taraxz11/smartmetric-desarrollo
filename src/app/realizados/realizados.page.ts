@@ -1,7 +1,7 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { StorageService } from '../servicios/storage.service';
 import { UploadService } from '../servicios/upload.service';
-import { Network } from '@awesome-cordova-plugins/network/ngx';
+import { httpErrors } from '../functions';
 import { AlertController } from '@ionic/angular';
 
 @Component({
@@ -13,7 +13,11 @@ export class RealizadosPage implements OnInit, AfterViewInit {
   
    completed = JSON.parse(localStorage.getItem('completed'));
   
-   constructor(private updateStrg : StorageService, private uploadS : UploadService, private network: Network, private alertController: AlertController) { }
+
+   constructor(private updateStrg : StorageService, 
+    private uploadS : UploadService,
+    private alertController: AlertController) { }
+
  
   ngAfterViewInit(): void {
      this.updateStrg.getCompleted().subscribe(res => {
@@ -30,42 +34,27 @@ export class RealizadosPage implements OnInit, AfterViewInit {
 
   upload(){
    /*   let data =JSON.parse(localStorage.getItem('readings')) 
-
-  
-   
    */
 
-   window.addEventListener('offline', ()=>{
-    this.connection = false;
-    console.log("Todo en orden");
-    
-   })
+   let data ={
+    request_data: JSON.parse(localStorage.getItem('readings'))
+  }   
+    console.log(data);
+    this.uploadS.upload(data).subscribe( (res) =>{
+     console.log(res);
+     if(res['success']['code'] == 200){
+      localStorage.removeItem('readings');
+      localStorage.removeItem('completed');
+      window.location.reload();
+     }
+      
+      //else Fallo en la subida, intente de nuevo
+    },(error) =>{
+      let message =  httpErrors(error.status)
+      this.alert('Alerta',message)
+    }); 
 
-   if (this.connection != true) {
-    this.alert('Alerta', 'No cuentas con conexion a Internet')
-    console.log(this.connection);
   }
-  else{
-    let data ={
-      request_data: JSON.parse(localStorage.getItem('readings'))
-    }   
-      console.log(data);
-      this.uploadS.upload(data).subscribe( res =>{
-       
-        console.log(res);
-       
-        //if res === 200
-        localStorage.removeItem('readings');
-        localStorage.removeItem('completed');
-        window.location.reload();
-        //else Fallo en la subida, intente de nuevo
-      }); 
-      //probablemente necesite recargar pagina, checar ese detalle
-  }
-
-   
-  }
-
   async alert(header:string,message:string){
     const alert = await this.alertController.create({
       header: header,
@@ -75,5 +64,4 @@ export class RealizadosPage implements OnInit, AfterViewInit {
 
     await alert.present();
   }
-  
 }

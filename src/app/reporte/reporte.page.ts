@@ -22,11 +22,5 @@ export class ReportePage implements OnInit {
     this.currentReading = JSON.parse(this.actRoute.snapshot.paramMap.get('id'));
     console.log(this.currentReading);
   }
-  showAnomaly(){
-    if(this.currentReading.anomalies.length == 0){
-      return false;
-    }
-    return true
-  }
   
 }

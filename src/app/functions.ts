@@ -7,3 +7,17 @@ export function validValue(value:any){
      }
      return valid;
 }
+
+export function httpErrors(status:number){
+  let error:string;
+  switch(status){
+    default: error ='Ha ocurrido un error. Inténtelo más tarde.'
+    break;
+    case 0: error='Error en conexión. Verifique su conexión a internet.'
+    break;
+    case 403: error = 'Credenciales incorrectas.'
+    break;
+  }
+  return error;
+
+}

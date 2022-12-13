@@ -4,17 +4,6 @@ ion-toolbar img{
     width: auto;
     padding-right: 15px;
 }
-.btn_cap{
-    font-size: 20px;
-    padding: 12px;
-    color: #797979;
-    background-color: white;
-    border-radius: 25px;
-    box-shadow: 7px 9px 9px 4px rgba(0,0,0,0.3);
-    margin: 20px;
-    width:270px;
-    height:58px;
-}
 
 .alinear{
     display: flex;
@@ -24,7 +13,30 @@ ion-toolbar img{
     height:  26vh;
 }
 
-.btn_titulo{
-    color: rgb(68, 68, 68);
-    margin: 20px;
+ion-accordion-group{
+ margin:15px;
+ margin-top:30px;
+ margin-bottom:25px;
+ ion-accordion{
+    margin-bottom:30px;
+    border-radius: 15px;
+    box-shadow: 3px 12px 9px 0px rgba(161,150,150,0.75);
+    -webkit-box-shadow: 3px 12px 9px 0px rgba(161,150,150,0.75);
+    -moz-box-shadow: 3px 12px 9px 0px rgba(161,150,150,0.75);
+ }
+}
+ion-item{
+    
+    font-size: 22px;
+    background-color: #fff;
+    ion-label{
+        padding: 8px;
+        --color:rgb(37, 36, 36);
+
+    }
+}
+
+.description{
+    padding: 10%;
+    font-size:20px;
 }

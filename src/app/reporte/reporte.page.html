@@ -46,7 +46,7 @@
     <div class="uno"><ion-label>Fecha</ion-label></div>
     <div class="dos"><ion-label>{{currentReading.date}}</ion-label></div>
   </div>
-  <div class="cajita" *ngIf="showAnomaly()">
+  <div class="cajita" *ngIf="currentReading.anomalies">
     <div class="uno"><ion-label>Anomalías</ion-label></div>
     <div class="dos">
       <ion-list >

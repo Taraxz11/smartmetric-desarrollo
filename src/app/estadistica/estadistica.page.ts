@@ -11,14 +11,15 @@ export class EstadisticaPage implements OnInit {
     incomplete: JSON.parse(localStorage.getItem('products')) ,
     completed : JSON.parse(localStorage.getItem('completed')),
     readings : JSON.parse(localStorage.getItem('readings')),
-    stats: JSON.parse(localStorage.getItem('stats'))
+    stats: JSON.parse(localStorage.getItem('stats')),
+    employee: JSON.parse(localStorage.getItem('employee'))
   }
   incomplete = [];
   completed = [];
   readings = [];
   liters;
+  employee;
   stats = new Object();
-  
 
   constructor() { }
    
@@ -37,9 +38,14 @@ export class EstadisticaPage implements OnInit {
     if(validValue(this.storage.stats)!=false){
       this.liters = this.storage.stats
     }  
+    if(validValue(this.storage.employee)!=false){
+      this.employee = this.storage.employee
+    }
+    let productsCount = this.incomplete.length + this.completed.length
   
     this.stats = {
-    route : 42,
+    name: this.employee.id,
+    route : productsCount,
     incomplete: this.incomplete.length,
     complete :this.completed.length,
     anomalies : this.anomalies(),
