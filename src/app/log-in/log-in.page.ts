@@ -31,7 +31,6 @@ export class LogInPage implements OnInit {
   type ='password';
 
   errorSubject = new Subject<string>();
-  constructor(private alertController: AlertController, 
 
   connection : boolean = true;
    
@@ -130,6 +129,7 @@ export class LogInPage implements OnInit {
 
     this.formularLogin.reset();
   }
+}
 
   //Verificar conexion a internet LOGIN
   async openAlert(){
@@ -161,6 +161,7 @@ export class LogInPage implements OnInit {
     loading.present();
   }
 }
+
 
 
 /*
