@@ -87,8 +87,7 @@ export class CapturarPage implements OnInit {
     this.confirm = fgVal.confirm;
     if(this.fgReading.invalid){ return null}
     if(this.current != this.confirm){return 'different'}
-    if(Number(this.current) <= Number(this.client.last_measure)){ return 'less'} // la lectura puede ser igual a la lectura anterior?
-
+    if(Number(this.current) < Number(this.client.last_measure)){ return 'less'} 
     return 'ok'
   }
   validation(){

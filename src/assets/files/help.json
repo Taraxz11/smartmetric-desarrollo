@@ -26,7 +26,7 @@
          },
          {"id":6, 
          "name":"¿Captura válida?",
-         "description":["La lectura ingresada debe ser mayor o igual a la anterior.",
+         "description":["La lectura ingresada debe ser mayor a la anterior.",
          "La lectura ingresada y la confirmación deben ser iguales.",
          "No se permite ingresar letras o caracteres especiales en la lectura.",
          "La sección de anomalías es opcional.",
@@ -39,7 +39,7 @@
          },
          {  "id":8,
             "name":"La lectura ingresada es menor a la anterior",
-            "description":["La lectura ingresada debe ser mayor o igual a la anterior."]
+            "description":["La lectura ingresada debe ser mayor a la anterior."]
          },
          {  "id":9,
             "name":"Sobre ruta...",

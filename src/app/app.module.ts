@@ -22,7 +22,6 @@ import { Camera } from '@ionic-native/camera/ngx';
 import { ScreenOrientation } from '@awesome-cordova-plugins/screen-orientation/ngx';
 import { Network } from '@awesome-cordova-plugins/network/ngx';
 import { Geolocation } from '@awesome-cordova-plugins/geolocation/ngx';
-import { Network } from '@awesome-cordova-plugins/network/ngx';
 
 @NgModule({
   declarations: [AppComponent],
