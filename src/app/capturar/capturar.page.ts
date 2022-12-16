@@ -87,8 +87,7 @@ export class CapturarPage implements OnInit {
     this.confirm = fgVal.confirm;
     if(this.fgReading.invalid){ return null}
     if(this.current != this.confirm){return 'different'}
-    if(Number(this.current) <= Number(this.client.last_measure)){ return 'less'} // la lectura puede ser igual a la lectura anterior?
-
+    if(Number(this.current) < Number(this.client.last_measure)){ return 'less'} 
     return 'ok'
   }
   validation(){
@@ -151,8 +150,8 @@ export class CapturarPage implements OnInit {
         date :  `${this.date.getFullYear()}-${this.date.getMonth()}-${this.date.getDate()} ${this.date.getHours()}:${this.date.getMinutes()}:${this.date.getSeconds()}`,
         latlong : loc,
         photos: photos,
-        anomaly : anomaly,
-        description: descAnomaly
+        anomaly : anomaly||0,
+        description: descAnomaly||'Sin anomalías'
        }
        console.log(reading)
        this.readings.push(reading);     
@@ -217,7 +216,7 @@ export class CapturarPage implements OnInit {
       address: this.products[this.id].address,
       last_measure:this.products[this.id].last_measure,
       current : this.current||0,
-      anomalies : this.descAnomalies,
+      anomalies : this.descAnomalies||'Sin anomalías',
       date : this.dateSpanish(this.date.toString()),
       client :       {
         rowid: this.products[this.id].client.rowid,

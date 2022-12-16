@@ -26,7 +26,7 @@
          },
          {"id":6, 
          "name":"¿Captura válida?",
-         "description":["La lectura ingresada debe ser mayor o igual a la anterior.",
+         "description":["La lectura ingresada debe ser mayor a la anterior.",
          "La lectura ingresada y la confirmación deben ser iguales.",
          "No se permite ingresar letras o caracteres especiales en la lectura.",
          "La sección de anomalías es opcional.",
@@ -34,12 +34,12 @@
          "Debe existir un mínimo de 2 fotografías. Debe constar de una foto de la ubicación y una del medidor."
          ]}, 
          {  "id":7,
-            "name":"La lectura ingresada no coincide",
+            "name":"Lectura no coincide",
             "description":["La lectura ingresada y la confirmación deben ser iguales."]
          },
          {  "id":8,
-            "name":"La lectura ingresada es menor a la anterior",
-            "description":["La lectura ingresada debe ser mayor o igual a la anterior."]
+            "name":"Lectura menor a la anterior",
+            "description":["La lectura ingresada debe ser mayor a la anterior."]
          },
          {  "id":9,
             "name":"Sobre ruta...",
@@ -47,7 +47,7 @@
          },
          {  "id":10,
             "name":"Sobre estadísticas...",
-            "description":["La sección estadísticas muestra la información del recorrido: los lugares pendientes por realizar captura, el avance de las capturas realizadas, anomalías detectadas según las capturas realizada, y una comparación del consumo de agua."]
+            "description":["La sección estadísticas muestra la información del recorrido: los lugares pendientes por realizar captura, el avance de las capturas realizadas, anomalías detectadas según las capturas realizadas, y una comparación del consumo de agua."]
          }
 
     ]

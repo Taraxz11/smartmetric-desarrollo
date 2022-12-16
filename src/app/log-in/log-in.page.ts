@@ -87,7 +87,7 @@ export class LogInPage implements OnInit {
 
     if (this.connection != true) {
       this.loadingCtrl.dismiss();
-      this.alert('Alerta', 'No cuentas con conexion a Internet')
+      this.alert('Alerta', 'No cuenta con conexión a Internet')
       console.log(this.connection);
      
     }
@@ -131,18 +131,6 @@ export class LogInPage implements OnInit {
   }
 }
 
-  //Verificar conexion a internet LOGIN
-  async openAlert(){
-    const alert = await this.alertController.create({
-      header: 'Verificar conexion a internet',
-      message: 'Usted no tiene conexion a internet',
-      buttons: [{
-        text: "Ok"
-      }]
-    })
-    await alert.present();
-  }
-  //DONE
 
   async alert(header:string,message:string){
     const alert = await this.alertController.create({
@@ -164,60 +152,3 @@ export class LogInPage implements OnInit {
 
 
 
-/*
-this.loginService.login(jsonLogin).subscribe( res =>{
-        console.log(res['success']['token']);
-        localStorage.setItem('token',res['success']['token']);
-        this.token= localStorage.getItem('token');
-
-        this.employe.employeInfo(jsonLogin.login, this.token).subscribe(
-          res => { 
-            this.products.products(this.token,res['id']).subscribe( 
-              res =>{              
-    
-                localStorage.setItem('products', JSON.stringify(res))
-
-                this.router.navigate(['/pendientes']);
-
-              });
-            })
-        
-        this.anomalias.getAnomalias(this.token).subscribe( res =>{
-         
-        localStorage.setItem('anomalies', JSON.stringify(res));
-        })
-      
-
-    },(error)=>{
-       console.log(error)
-       this.alert('Alerta','Credenciales incorrectas')
-
-      // if(error.status){enviar alerta correspondiente al error}
-    })
-
-
-
-*/
-
-/*() => {
-
-      // Here you are sure that the send has shared the data sucessFully
-
-    }, (error) => {
-
-    } 
-    {
-      next(x) {
-        console.log(x);
-      },
-      error(err) {
-        //this.alert('Alerta','Credenciales incorrectas');
-        console.error('something wrong occurred: ' + err);
-      }, 
-      complete() {
-        console.log('done');
-       // this.router.navigate(['/pendientes']);
-      },
-    }
-    
-    */
